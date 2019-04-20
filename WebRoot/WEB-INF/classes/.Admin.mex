@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="cn.edu.hezeu.jsj.admin" location="0,0" size="0,0">
+    <action name="adminmanager" location="0,0" size="0,0">
+      <result name="seeMyInfo">
+        <resourceEdge source="seeMyInfo" routing="0" target="myInfo.jsp" />
+      </result>
+      <result name="getMyInfoToUpdate">
+        <resourceEdge source="getMyInfoToUpdate" routing="0" target="modifyMyInfo.jsp" />
+      </result>
+      <result name="updateMyInfo">
+        <resourceEdge source="updateMyInfo" routing="0" target="modifyMyPwd.jsp" />
+      </result>
+      <result name="getMyInfo" />
+    </action>
+  </package>
+  <webResource name="myInfo.jsp" path="/admin/myInfo.jsp" location="0,0" size="0,0" />
+  <webResource name="modifyMyInfo.jsp" path="/admin/modifyMyInfo.jsp" location="0,0" size="0,0" />
+  <webResource name="modifyMyPwd.jsp" path="/admin/modifyMyPwd.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

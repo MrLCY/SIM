@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+  <hibernate-mapping >
+   <class name="cn.edu.hezeu.jsj.pojo.Teacher"  table="teacher">
+   <id name="id" column="id">
+   		<generator class="native"></generator>
+   </id>
+   
+   <property name="password" column="password" type="string"></property>
+	 <property name="realname" column="realname" type="string" ></property>
+   <property name="teacherid" column="teacherid" type="string" ></property>
+   <property name="username" column="username" type="string" ></property>
+  <set name="teacher_course" inverse="true" table="teacher_course" cascade="all">
+  	<key column="teacher_id"></key>
+  	<one-to-many class="cn.edu.hezeu.jsj.pojo.Teacher_Course" />
+  </set>
+   </class>
+  </hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+  <hibernate-mapping >
+   <class name="cn.edu.hezeu.jsj.pojo.Admin"  table="admin">
+   <id name="id" column="id">
+   		<generator class="native"></generator>
+   </id>
+   
+   <property name="password" column="password" type="string"></property>
+	 <property name="realname" column="realname" type="string" ></property>
+   <property name="adminno" column="adminno" type="string" ></property>
+   <property name="username" column="username" type="string" ></property>
+  
+   </class>
+  </hibernate-mapping>

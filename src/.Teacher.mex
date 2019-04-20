@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="cn.edu.hezeu.jsj.pojo.Teacher" location="0,0" size="0,0">
+    <action name="teachermanager" location="0,0" size="0,0">
+      <result name="getAllTeacher">
+        <resourceEdge source="getAllTeacher" routing="0" target="TeacherMaintain.jsp" />
+      </result>
+      <result name="addTeacher" />
+      <result name="deleteTeacher" />
+      <result name="getStudentInCourse">
+        <resourceEdge source="getStudentInCourse" routing="0" target="StudentInCourse.jsp" />
+      </result>
+      <result name="deleteStudentFromCourse" />
+    </action>
+  </package>
+  <package name="cn.edu.hezeu.jsj.pojo.Course" location="0,0" size="0,0">
+    <action name="coursemanager" location="0,0" size="0,0">
+      <result name="addCourse" />
+      <result name="getCourseByTeacher">
+        <resourceEdge source="getCourseByTeacher" routing="0" target="CourseMaintain.jsp" />
+      </result>
+      <result name="getStudentNoInCourse">
+        <resourceEdge source="getStudentNoInCourse" routing="0" target="addStudentToCourse.jsp" />
+      </result>
+      <result name="addStudentToCourse" />
+      <result name="deleteCourseByTeacher" />
+    </action>
+  </package>
+  <webResource name="TeacherMaintain.jsp" path="/admin/TeacherMaintain.jsp" location="0,0" size="0,0" />
+  <webResource name="CourseMaintain.jsp" path="/teacher/CourseMaintain.jsp" location="0,0" size="0,0" />
+  <webResource name="StudentInCourse.jsp" path="/teacher/StudentInCourse.jsp" location="0,0" size="0,0" />
+  <webResource name="addStudentToCourse.jsp" path="/teacher/addStudentToCourse.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

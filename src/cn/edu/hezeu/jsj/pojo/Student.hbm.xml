@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+  <hibernate-mapping package="cn.edu.hezeu.jsj.pojo">
+   <class name="Student"  table="student">
+   <id name="id" column="id">
+   		<generator class="native"></generator>
+   </id>
+   
+   <property name="birthday" column="birthday" type="date"></property>
+
+   <property name="email" column="email" type="string" ></property>
+   <property name="image" column="image" type="string" ></property>
+   <property name="nativeplace" column="nativeplace" type="string" ></property>
+   <property name="password" column="password" type="string" ></property>
+   <property name="realname" column="realname" type="string" ></property>
+   <property name="studentno" column="studentno" type="string" ></property>
+   <property name="tel" column="tel" type="string" ></property>
+   <set name="student_course" inverse="true" table="student_course" cascade="all">
+   		<key column="student_id"></key>
+   		<one-to-many class="Student_Course"/>
+   </set>
+   </class>
+  </hibernate-mapping>

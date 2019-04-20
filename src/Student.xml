@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    <struts>
+    <package name="cn.edu.hezeu.jsj.Student" namespace="/Student" extends="my-struts-default">
+     <action name="studentmanager" class="StudentManagerAction">
+        <result name="getAllStudent">/admin/studentMaintain.jsp</result>
+        <result name="getStudentToUpdate">/admin/studentModify.jsp</result>
+        <result name="getOneStudentInfo">/admin/studentInfo.jsp</result>
+        <result name="updateStudent" type="redirectAction">/Student/studentmanager!getAllStudent?pagebean.currentPage=1</result>
+        <result name="addStudent" type="redirectAction">/Student/studentmanager!getAllStudent?pagebean.currentPage=1</result>
+        <result name="deleteStudent" type="redirectAction">/studentmanager!getAllStudent?pagebean.currentPage=1</result>
+        <result name="input">/admin/studentAdd.jsp</result>
+        <result name="getHasSelectedCourseByStudent">/student/hasSelectedCourse.jsp</result>
+        <result name="getNoSelectedCourseByStudent">/student/NoSelectedCourse.jsp</result>
+        <result name="chooseCourse" type="redirectAction">/Student/studentmanager!getNoSelectedCourseByStudent</result>
+     </action>
+    </package>
+    </struts>

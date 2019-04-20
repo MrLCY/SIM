@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+  <hibernate-mapping package="cn.edu.hezeu.jsj.pojo">
+   <class name="Course"  table="course">
+   <id name="id" column="id">
+   		<generator class="native"></generator>
+   </id>
+   
+   <property name="coursename" column="coursename"></property>
+	<set name="teacher_course" inverse="true" table="teacher_course" cascade="save-update">
+		<key column="course_id"></key>
+		<one-to-many class="Teacher_Course"/>
+	</set>
+	
+	<set name="student_course" inverse="true" table="student_course" cascade="save-update">
+		<key column="course_id"></key>
+		<one-to-many class="Student_Course"/>
+	</set>
+   </class>
+  </hibernate-mapping>

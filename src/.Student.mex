@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="cn.edu.hezeu.jsj.Student" location="0,0" size="0,0">
+    <action name="studentmanager" location="0,0" size="0,0">
+      <result name="getAllStudent">
+        <resourceEdge source="getAllStudent" routing="0" target="studentMaintain.jsp" />
+      </result>
+      <result name="getStudentToUpdate">
+        <resourceEdge source="getStudentToUpdate" routing="0" target="studentModify.jsp" />
+      </result>
+      <result name="getOneStudentInfo">
+        <resourceEdge source="getOneStudentInfo" routing="0" target="studentInfo.jsp" />
+      </result>
+      <result name="updateStudent" />
+      <result name="addStudent" />
+      <result name="deleteStudent" />
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="studentAdd.jsp" />
+      </result>
+      <result name="getHasSelectedCourseByStudent">
+        <resourceEdge source="getHasSelectedCourseByStudent" routing="0" target="hasSelectedCourse.jsp" />
+      </result>
+      <result name="getNoSelectedCourseByStudent">
+        <resourceEdge source="getNoSelectedCourseByStudent" routing="0" target="NoSelectedCourse.jsp" />
+      </result>
+      <result name="chooseCourse" />
+    </action>
+  </package>
+  <webResource name="studentMaintain.jsp" path="/admin/studentMaintain.jsp" location="0,0" size="0,0" />
+  <webResource name="studentModify.jsp" path="/admin/studentModify.jsp" location="0,0" size="0,0" />
+  <webResource name="studentInfo.jsp" path="/admin/studentInfo.jsp" location="0,0" size="0,0" />
+  <webResource name="studentAdd.jsp" path="/admin/studentAdd.jsp" location="0,0" size="0,0" />
+  <webResource name="hasSelectedCourse.jsp" path="/student/hasSelectedCourse.jsp" location="0,0" size="0,0" />
+  <webResource name="NoSelectedCourse.jsp" path="/student/NoSelectedCourse.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+
